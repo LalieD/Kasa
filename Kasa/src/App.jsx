@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import './styles/index.scss'
@@ -7,9 +6,9 @@ import Home from './pages/Home';
 import About from './pages/About'; 
 import NotFound from './pages/NotFound';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
+  
   return (
     <BrowserRouter>
       <Layout>
