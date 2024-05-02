@@ -1,0 +1,19 @@
+.card {
+    width: 340px;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 60px;
+}
+  
+.card-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+}
