@@ -27,3 +27,7 @@
 .navbar li a:hover {
     text-decoration: underline;
 }
+
+.navbar li a.active {
+    text-decoration: underline;
+}

@@ -15,7 +15,7 @@ const Collapse = ({ headerText, children }) => {
                     {headerText}
                     <img className={`collapse-arrow ${isOpen ? 'collapse-arrow-up' : 'collapse-arrow-down'}`} src="/assets/arrow_up.svg" alt="Arrow" />
                 </div>
-                <div className="collapse-content" style={{ height: isOpen ? 'auto' : '0'}}>
+                <div className="collapse-content" style={{ maxheight: isOpen ? '1000px' : '0px', padding: isOpen ? '10px' : '0px'}}>
                     <div className='collapse-content-inner'>
                         {children}
                     </div>
