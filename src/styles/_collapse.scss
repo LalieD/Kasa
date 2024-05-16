@@ -25,18 +25,15 @@
     .collapse-content {
         overflow: hidden;
         transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        background-color: #F6F6F673;
+        background-color: #f9f9f9;
         max-height: 0;
-    }
-
-    .collapse-content.open {
-        max-height: 100px;
     }
 
     .collapse-content-inner {
         color: black;
         font-size: 18px;
         font-weight: normal;
+        padding: 10px;
     }
 
     .collapse-arrow {

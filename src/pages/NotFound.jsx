@@ -1,11 +1,12 @@
 import React from 'react';
+import '../styles/NotFound.scss'
 
 function NotFound () {
     return (
-        <div>
+        <div className='not-found'>
             <h1>404</h1>
-            <p>Oups! La page que vous demandez n'existe pas.</p>
-            <a href="/">Retourner sur la page d'accueil</a> 
+            <p className='missing-page'>Oups! La page que vous demandez n'existe pas.</p>
+            <a href="/" className='return-home'>Retourner sur la page d'accueil</a> 
         </div>
     );
 }

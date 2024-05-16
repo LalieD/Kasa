@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../styles/_collapse.scss';
 
 const Collapse = ({ headerText, children }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const contentRef = useRef(null);
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+        if (contentRef.current) {
+            contentRef.current.style.maxHeight = isOpen ? `${contentRef.current.scrollHeight}px` : '0px';
+        }
+    }, [isOpen, contentRef]);
 
     return (
         <div className='collapse-global'>
@@ -15,7 +22,7 @@ const Collapse = ({ headerText, children }) => {
                     {headerText}
                     <img className={`collapse-arrow ${isOpen ? 'collapse-arrow-up' : 'collapse-arrow-down'}`} src="/assets/arrow_up.svg" alt="Arrow" />
                 </div>
-                <div className="collapse-content" style={{ maxheight: isOpen ? '1000px' : '0px', padding: isOpen ? '10px' : '0px'}}>
+                <div className="collapse-content" ref={contentRef}>
                     <div className='collapse-content-inner'>
                         {children}
                     </div>
