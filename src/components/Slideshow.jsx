@@ -17,14 +17,17 @@ const Slideshow = ({ images }) => {
             {images.length > 1 && (
                 <>
                     <button className='left-arrow' onClick={prevSlide}>
-                        <img src="/assets/arrow_left.svg" alt="Précédent" />
+                        <img className='arrow' src="/assets/arrow_left.svg" alt="Précédent" />
                     </button>
                     <button className='right-arrow' onClick={nextSlide}>
-                        <img src="/assets/arrow_right.svg" alt="Précédent" />
+                        <img className='arrow' src="/assets/arrow_right.svg" alt="Précédent" />
                     </button>
+                    <div className="numeration">
+                        {currentSlide + 1} / {images.length}
+                    </div>
                 </>
             )}
-            <img src={images[currentSlide]} alt="Slide" />
+            <img className='img-slide' src={images[currentSlide]} alt="Slide" />
         </div>
     );
 };

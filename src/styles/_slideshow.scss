@@ -1,15 +1,16 @@
 .slideshow-container {
     position: relative;
     width: 100%; 
+    height: 600px;
+    border-radius: 25px;
+    overflow: hidden;
     
-    img {
-        width: 100%;
-        height: 600px;
-        border-radius: 25px; 
+    .img-slide {
+        width: 100%; 
         display: block;
         transition: opacity 0.5s ease-in-out;
     }
-    
+
     button {
         position: absolute;
         top: 50%;
@@ -29,6 +30,17 @@
 
     .right-arrow {
         right: 25.96px;
+    }
+
+    .numeration {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 24.92px;
     }
 
 }
