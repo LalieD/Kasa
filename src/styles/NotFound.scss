@@ -28,3 +28,17 @@
     text-underline-offset: 3px;
     margin-bottom: 139px;
 }
+
+@media (max-width: 768px) {
+    .title-not-found {
+        font-size: 96px;
+    }
+
+    .missing-page {
+        font-size: 18px;
+    }
+
+    .return-home {
+        font-size: 14px;
+    }
+}

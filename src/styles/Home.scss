@@ -9,3 +9,11 @@
     border-radius: 25px; 
     margin: 100px;
 }
+
+@media (max-width: 768px) {
+    .cards-container {
+        background-color: white;
+        padding-top: 0px;
+        margin: 0;
+    }
+}

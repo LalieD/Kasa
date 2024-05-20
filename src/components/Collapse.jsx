@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../styles/_collapse.scss';
 
-const Collapse = ({ headerText, children }) => {
+const Collapse = ({ headerText, children, className = 'collapse-logement' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
@@ -16,7 +16,7 @@ const Collapse = ({ headerText, children }) => {
     }, [isOpen, contentRef]);
 
     return (
-        <div className='collapse-global'>
+        <div className={`collapse-global ${className}`}>
             <div className={`collapse ${isOpen ? 'open' : ''}`}>
                 <div className="collapse-header" onClick={toggleCollapse}>
                     {headerText}

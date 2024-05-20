@@ -20,3 +20,13 @@
     font-size: 18px;
     padding: 20px;
 }
+
+@media (max-width: 768px) {
+    .card-container {
+        margin: 20px;
+    }
+
+    .card {
+        height: 255px;
+    }
+}

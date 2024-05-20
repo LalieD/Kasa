@@ -1,6 +1,5 @@
-.collapse-global {
-    padding-left: 208.5px;
-    padding-right: 208.5px;
+.collapse-logement {
+    padding: 0;
 }
 
 .collapse {
@@ -52,5 +51,12 @@
 
     &.open .collapse-arrow-up {
         transform: rotate(-180deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .collapse {
+        font-size: 13px;
+        line-height: 18.54px;
     }
 }

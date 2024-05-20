@@ -14,3 +14,21 @@
 .footer-content p {
     padding-bottom: 29px;
 }
+
+@media (max-width: 768px) {
+    .footer p {
+        max-width: 100px;
+        margin: auto;
+        margin-bottom: 100px;
+        font-size: 12px;
+        line-height: 17.11px;
+    }
+
+    .footer-content img {
+       margin-bottom: 10px;
+    }
+
+    .footer-content {
+        min-height: 209px;
+    }
+}

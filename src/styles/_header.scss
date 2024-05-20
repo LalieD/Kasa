@@ -9,7 +9,15 @@
 .logo-container img {
     height: 68px; 
 }
+
+.logo {
+    display: none;
+}
   
+.desktop-logo {
+    display: block;
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -30,4 +38,25 @@
 
 .navbar li a.active {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .desktop-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block;
+        max-width: 145px;
+        max-height: 46.88px;
+    }
+
+   .header {
+    padding: 20px;
+   }
+
+   .navbar ul li a {
+    text-transform: uppercase;
+    font-size: 12px;
+   }
 }
