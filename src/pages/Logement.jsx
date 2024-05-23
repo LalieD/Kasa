@@ -23,30 +23,29 @@ const Logement = () => {
     return ( 
         <div className='global-logement'>
             <Slideshow images={logement.pictures} />
-            <div className='logement-header'>
-                <h1 className='title-logement'>{logement.title}</h1>
-                <p className='logement-location'>{logement.location}</p>
-            </div>
-                
-            <div className='tags-stars-host'>
-                <div className='tags-container'>
-                    {logement.tags.map((tag, index) => (
-                        <Tag key={index} tag={tag} />
-                    ))}
-                </div>
-                <div className='stars-host-container'>
-                    <div className='stars-container'>
-                        <Stars rating={parseInt(logement.rating)}/>
+            <div className='main-content-logement'>
+                <div className='logement-header'>
+                    <h1 className='title-logement'>{logement.title}</h1>
+                    <p className='logement-location'>{logement.location}</p>
+                    <div className='tags-container'>
+                        {logement.tags.map((tag, index) => (
+                            <Tag key={index} tag={tag} />
+                        ))}
                     </div>
+                </div> 
+                
+                <div className='stars-host-container'>
                     <div className='host-info'>
                         <div className='host-name-container'>
                             <p className='host-name'>{`${logement.host.name.split(' ')[0]}\n${logement.host.name.split(' ').slice(1).join(' ')}`}</p>
                         </div>
                         <img src={logement.host.picture} alt={`Photo de ${logement.host.name}`} className='host-picture' />
                     </div>
+                    <div className='stars-container'>
+                        <Stars rating={parseInt(logement.rating)}/>
+                    </div>
                 </div>
-            </div> 
-            
+            </div>
             <div className='description-equipments'>
                 <Collapse className='collapse-logement collapse-logement-description' headerText="Description">
                     <p className='description-logement'>
